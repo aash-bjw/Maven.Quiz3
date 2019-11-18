@@ -5,7 +5,10 @@ package rocks.zipcode.io.quiz3.arrays;
  */
 public class TicTacToe {
 
+    private String[][] board;
+
     public TicTacToe(String[][] board) {
+        this.board = board;
     }
 
     public TicTacToe() {
@@ -20,7 +23,20 @@ public class TicTacToe {
     }
 
     public Boolean isRowHomogenous(Integer rowIndex) {
-        return null;
+        for(int i = 0; i <=2; i++){
+            if((board[i][0].equals(rowIndex)) && (board[i][0] == board[i][1]) && (board[i][1] == board[i][2])){
+                return true;
+            }
+
+//        if ((board[0][0].equals(rowIndex)) && (board[0][1].equals(rowIndex)) && (board[0][2].equals(rowIndex))) {
+//            if((board[1][0].equals(rowIndex)) && (board[1][1].equals(rowIndex)) && (board[1][2].equals(rowIndex))){
+//                if((board[2][0].equals(rowIndex)) && (board[2][1].equals(rowIndex)) && (board[2][2].equals(rowIndex))){
+//                    return true;
+//                }
+//            }
+
+        }
+        return false;
     }
 
     public Boolean isColumnHomogeneous(Integer columnIndex) {
