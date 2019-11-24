@@ -12,42 +12,38 @@ public class TicTacToe {
     }
 
     public TicTacToe() {
+        board = new String[3][3];
     }
 
     public String[] getRow(Integer value) {
-        return null;
+
+        return board[value];
     }
 
     public String[] getColumn(Integer value) {
-        return null;
+
+        return new String[] {board[0][value],board[1][value],board[2][value]};
     }
 
     public Boolean isRowHomogenous(Integer rowIndex) {
-        for(int i = 0; i <=2; i++){
-            if((board[i][0].equals(rowIndex)) && (board[i][0] == board[i][1]) && (board[i][1] == board[i][2])){
-                return true;
-            }
-
-//        if ((board[0][0].equals(rowIndex)) && (board[0][1].equals(rowIndex)) && (board[0][2].equals(rowIndex))) {
-//            if((board[1][0].equals(rowIndex)) && (board[1][1].equals(rowIndex)) && (board[1][2].equals(rowIndex))){
-//                if((board[2][0].equals(rowIndex)) && (board[2][1].equals(rowIndex)) && (board[2][2].equals(rowIndex))){
-//                    return true;
-//                }
-//            }
-
+        String[] row = getRow(rowIndex);
+        return row[0].equals(row[1]) && row[1].equals(row[2]);
         }
-        return false;
-    }
 
     public Boolean isColumnHomogeneous(Integer columnIndex) {
-        return null;
+        String[] column = getColumn(columnIndex);
+        return column[0].equals(column[1]) && column[1].equals(column[2]);
+    }
+
+    public Boolean isDiagonalHomogeneous(String[] diagonal) {
+        return diagonal[0].equals(diagonal[1]) && diagonal[1].equals(diagonal[2]);
     }
 
     public String getWinner() {
-        return null;
+     return null;
     }
 
     public String[][] getBoard() {
-        return null;
+        return this.board;
     }
 }

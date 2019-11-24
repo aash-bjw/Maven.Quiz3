@@ -22,7 +22,7 @@ public class Lab {
     }
 
     public void setStatus(LabStatus labStatus) {
-        this.labStatus = LabStatus.INCOMPLETE;
+        this.labStatus = labStatus;
 
     }
 
