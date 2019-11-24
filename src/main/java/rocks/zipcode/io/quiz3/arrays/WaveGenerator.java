@@ -5,6 +5,8 @@ package rocks.zipcode.io.quiz3.arrays;
  */
 public class WaveGenerator {
     public static String[] wave(String str) {
+
+
         return null;
     }
 }

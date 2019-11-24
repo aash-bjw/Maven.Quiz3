@@ -21,8 +21,8 @@ public class SquareArrayAnalyzer {
         Arrays.sort(squaredValues);
 
         for(int i = 0; i < inputArray.length; i++){
-            for (int j= 0; j < squaredValues.length; j++){
-                if(squaredValues[j] == inputArray[i*i]){
+            for (Integer squaredValue : squaredValues) {
+                if (squaredValue.equals(inputArray[i] * inputArray[i])) {
                     return true;
                 }
             }
